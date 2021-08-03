@@ -22,7 +22,7 @@ import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
 myTerminal      = "kitty"
-myBrowser       = "firefox"
+myBrowser       = "brave"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
