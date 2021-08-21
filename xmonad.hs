@@ -47,6 +47,7 @@ myKeys = [
      ("M-<Return>", spawn (myTerminal))
     ,("M-d", spawn "dmenu_run")
     ,("M-S-f", spawn (myBrowser))
+    ,("M-S-t", spawn "pcmanfm")
     ,("M-S-m", spawn $ myTerminal ++ " -e alsamixer")
 
     --Kill
@@ -75,6 +76,9 @@ myKeys = [
     ,("M-<Tab>", sendMessage NextLayout)
     --,("M-S-<Tab>", sendMessage PrevLayout)
     ,("M-f", sendMessage $ Toggle NBFULL)
+
+    -- Float
+    ,("M-t", withFocused (windows . W.sink))
 
     --Worspace
     ,("M-&", windows $ W.greedyView "1")
