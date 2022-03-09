@@ -123,7 +123,9 @@ myEventHook = mempty
 
 myStartupHook = do
     spawnOnce "xmodmap ~/.config/i3/xmodmaprc &"
-    spawnOnce "xrandr --output HDMI1 --auto --right-of eDP1 &"
+    -- spawnOnce "xrandr --output HDMI1 --auto --right-of eDP1 &"
+    spawnOnce "xrandr --output DP1-9 --auto --right-of eDP1"
+    spawnOnce "xrandr --output HDMI1 --auto --right-of DP1-9"
     spawnOnce "exec ~/.config/i3/fehbg &"
     spawnOnce "nm-applet &"
 
